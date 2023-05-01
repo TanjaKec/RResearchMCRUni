@@ -6,13 +6,13 @@ weight: 3
 
 ## Why do we need it and what is it? 🤔
 
-Working on a DS project will create a large number of files that you want to keep control over and give some structure to. Often your work could benefit from collaboration with others so you need to make it available for reading or edits, as a project unfolds. You could manage those issues by implementing the free and open source version control system Git into your project workflow. It is a tool that tracks changes to your files and enables you to share those changes with others. Those Git configured sets of files are called the repositories or repos and are organised in a highly structured way. 
+Working on a data project will create a large number of files that you want to keep control over and give some structure to. Often your work could benefit from collaboration with others so you need to make it available for reading or edits, as a project unfolds. You could manage those issues by implementing the free and open source version control system Git into your project workflow. It is a tool that tracks changes to your files and enables you to share those changes with others. Those Git configured sets of files are called the repositories or repos and are organised in a highly structured way. 
 
 To provide a home for your Git-based data analytical projects on the internet you can use the hosting site GitHub for statistical and data scientific work flows. It will help you manage the varied accumulation of files as your project develops, starting with a data file, through the creation of figures, reports, and of course your ultimate pride and joy, the source code file.
 
 ## Setting Git up
 
-If you have never used Git or GitHub before, start by installing Git and creating a GitHub account. Then, link the two together.
+If you have never used [Git](https://git-scm.com/) or [GitHub](https://github.com/) before, start by installing Git and creating a GitHub account. Then, link the two together.
 
 1) You need to install Git from [git-scm](https://git-scm.com/downloads)
 Note: It will automatically detect your operating system and give you a link to download.
