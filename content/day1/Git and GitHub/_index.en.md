@@ -91,7 +91,7 @@ You can read about how to use GitHub further by exploring [`Chapter 9: Connect t
 You might find it useful bookmarking the link for [GitHub Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)!
 {{% /notice %}}
 
------------------------------
+---------------------
 Material is released under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ![](/images/cc_by_sa.jpg?width=5pc)
