@@ -1,9 +1,9 @@
 ---
-title: Reproducible Research in R
+title: Reproducible Research
 ---
-# Reproducible Reaserch in R
+# Reproducible research: Advancing innovation through connectivity
 
-#### [Tatjana Kecojevic,](https://www.linkedin.com/in/tatjana-kecojevic-803704143/) [The University of Manchester, School of Social Sciences](https://www.socialsciences.manchester.ac.uk)
+#### [Tatjana Kecojevic,](https://research.manchester.ac.uk/en/persons/tatjana-kecojevic) [The University of Manchester, School of Social Sciences](https://www.socialsciences.manchester.ac.uk)
 
 ![RMarkdown](/images/rmarkdown_wizards.png?width=40pc)
 

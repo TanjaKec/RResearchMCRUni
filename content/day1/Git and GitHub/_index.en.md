@@ -62,8 +62,7 @@ git config --global user.name "your name"
 ```
 
 
-In the shell, run:
-
+You might find useful the following link for setting up Version Control with Git from RStudio:
 
 <http://rstudio-pubs-static.s3.amazonaws.com/272737_7d6178a0e50043528d9ba636fdde209e.html>
 

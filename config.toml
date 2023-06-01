@@ -1,8 +1,8 @@
-baseURL = "https://reproresearchinr.netlify.com/"
+baseURL = "https://rrmcrsoss.netlify.app/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Reproducible Research in R"
+title = "Reproducible Research"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
@@ -27,7 +27,7 @@ home = ["HTML"]
 
 [Languages]
 [Languages.en]
-title = "Reproducible Research in R"
+title = "Reproducible Research"
 weight = 1
 languageName = "English"
 

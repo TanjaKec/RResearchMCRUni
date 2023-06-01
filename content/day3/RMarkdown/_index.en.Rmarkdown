@@ -71,9 +71,12 @@ Before we start learning about `RMarkdown` let us do an exercise of RMarkdown ap
 
 Inside the data folder you will find the following `csv` files:
 
-- athlete_events.csv
-- noc_regions.csv
-- exyu_olympic.csv
+- `athlete_events.csv`: available from the [Kaggle](https://www.kaggle.com) platform as the [120 years of Olympic history: athletes and results](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results) data set.
+- `noc_regions.csv`: contains the list of the National Olympic Committees (NOC)
+- `exyu_olympic.csv`: subset of the results of the ex-[Yugoslavia](https://en.wikipedia.org/wiki/Yugoslavia) countries (Bosnia and Herzegovina, Croatia, Montenegro, North Macedonia, Serbia and Slovenia). 
+
+The `120 years of Olympic history: athletes and results` data set was uploaded to the Kaggle by [Randi H Griffin, PhD](http://www.randigriffin.com/2018/05/27/olympic-history-1-web-scraping.html) who has subsequently wrote a series of blog posts analysing different aspects of the data.
+
 
 {{% notice info %}}
 Split into groups of three and discuss how you would produce a Word document or a PowerPoint presentation to present your findings for the following problem:
@@ -83,7 +86,7 @@ Open the `exyu_olympic.csv` file in Excel and try to:
 
 -	Find the number of medals per team? 
 -	Find the number of medals per team for the last Rio games?
--	Visualise data about the number of female and male athletes from ex YU countries available in the data set.
+-	Visualise data about the number of female and male athletes from ex-YU countries available in the data set.
 
 We will work on this for the next 10 minutes. 🕟😬
 
