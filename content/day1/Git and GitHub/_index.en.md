@@ -61,11 +61,6 @@ git config --global user.email "your@email.com"
 git config --global user.name "your name"
 ```
 
-
-You might find useful the following link for setting up Version Control with Git from RStudio:
-
-<http://rstudio-pubs-static.s3.amazonaws.com/272737_7d6178a0e50043528d9ba636fdde209e.html>
-
 ## Let RStudio talk to GitHub 🤓
 
 RStudio has integrated facilities that make the use of Git simpler. You will have to go through this set-up once or once per computer.
@@ -87,7 +82,9 @@ First we will start by setting up SSH keys that will allow you to securely commu
 You can read about how to use GitHub further by exploring [`Chapter 9: Connect to GitHub`](https://happygitwithr.com/push-pull-github.html) in [Jenny's](https://jennybryan.org) book [Happy Git and GitHub for the useR](https://happygitwithr.com/index.html).
 
 {{% notice tip %}}
-You might find it useful bookmarking the link for [GitHub Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)!
+You might find useful the following link for setting up Version Control with Git from RStudio:
+<http://rstudio-pubs-static.s3.amazonaws.com/272737_7d6178a0e50043528d9ba636fdde209e.html>
+and bookmarking the link for [GitHub Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) as it might come in handy!
 {{% /notice %}}
 
 ---------------------

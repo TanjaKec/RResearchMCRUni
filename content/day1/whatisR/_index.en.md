@@ -7,6 +7,8 @@ weight: 1
 
 ## Before there was R, there was S! 🤠
 
+## Before there was R, there was S! 🤠
+
 **R** is a dialect of the **S** language that was developed in 1976 by *Rick Becker* and *John Chambers* at the  Bell Laboratories.
 
 *Rick Becker* gave an excellent keynote talk *"Forty Years of S"* at the UseR!2016 conference:   

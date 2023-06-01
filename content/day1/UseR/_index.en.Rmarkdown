@@ -6,6 +6,7 @@ output:
 weight: 5
 ---
 
+
 The RStudio window has multiple panes. [RStudio IDE Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf):
 
 ![Red variant](/day1/UseR/images/RStudio1.png?width=40pc)
@@ -66,6 +67,7 @@ Use the **Tools | Change Working Dir...** menu (**Session | Set Working Director
 Use the **More | Set As Working Directory** menu
 
 ![Red variant](/day1/UseR/images/SetWD1.png?width=20pc)
+
 
 However, you should always start a fresh project (**File | New Project...**) that will automatically set up your working directory without having to point to it in your script file. You should read the [Project-oriented workflow 💻🔥](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) article by [Jenny Bryan](https://jennybryan.org/) to convince yourself that this would be a good habit you should adopt. 
 
