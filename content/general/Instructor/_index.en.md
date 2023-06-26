@@ -12,7 +12,6 @@ weight: 2
 >
 >##### The material presented is built on those principles and has been enriched by integrating the vast amount of open and inclusive #rstats community resources. This learning resource is free to use. It is written in [`Rmarkdown`](https://cran.r-project.org/web/packages/rmarkdown/index.html) using [`blogdown`](https://cran.r-project.org/web/packages/blogdown/index.html) package. 
 
-
 **Dr Sook Kim** received her PhD in Social Statistics at [the University of Manchester](https://www.manchester.ac.uk/). Her research centres around gender inequalities at work, and advanced quantitative methods. She has contributed to several government-funded projects on the gender pay gap,  theoretical sampling design, and methodological advancements on the use of administrative data in official statistics. 
 
 ![Sook Kim](/images/SK.jpg?width=40pc)
