@@ -1,0 +1,378 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: Import Data to R
+output: 
+  learnr::tutorial
+weight: 8
+---
+
+It is the first big hurdle when dealing with data in R. 
+
+You are most likely to have looked at, organised and examined your data files in Excel.
+
+Opening data in R is fairly simply, but organising it for analysis might take some thought and consideration. You'll guess that it is possible to use the **File | Import Dataset** menu option in RStudio to import your data (to learn more see [Importing Data with RStudio](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio)), however we’re going to do it the proper way with a command.
+
+R can import all types of data:
+
+- (Tab, Blank space) Delimited Text
+- CSV files
+- Excel files
+- JSON 
+- SAS
+- STATA
+- MiniTab
+- SPSS...
+
+In this section we will show you how to access the most commonly used data types. Once you start playing with the data and wrangling it in the way it suits you for your analytical manipulations you might find it interesting to explore the options for writing data. Here, we are not going to show you how to do it, but rather focus on basic `read` data functionality in R. 
+
+### the R base
+
+The simplest data form is a [text file](https://en.wikipedia.org/wiki/Text_file). Text files can be read by any computer operating system and by almost all different kinds of statistical programs. Saving data as a text file makes your data highly accessible. If you have a text data file you wish to use, you can easily import it with **the R base** functions `read.table()`
+
+This reads a file in table format and creates a data frame from it
+
+```
+# Read tabular data into R
+df_txt <- read.table(file_name.txt, header = FALSE)
+```
+
+There are many packages that let R import all types of data, and we will start by focusing on `CSV` files as they are the most frequent type.
+
+Comma separated files are the most common way to save spreadsheets that don’t require a licenced, usually not free program to open. Importing `CSV` is part of base R and you can use `read.csv()` function to do so. 
+
+
+##### `read.csv()`
+
+Let us go to <https://data.gov.uk/> UK open data portal. In particular, let us try to access [Leeds libraries](https://data.gov.uk/dataset/4853a980-0c6d-4d83-9daa-d0441b21f6e1/leeds-libraries) and import this data to R.
+
+Instead of downloading it onto our local computers, we will import it to R directly from the web using the link provided.
+
+
+```r
+df_csv <- read.csv("https://datamillnorth.org/download/leeds-libraries/cfc9f345-4916-4b74-aa9e-cecc78db9075/library%2520locations.csv", stringsAsFactors = FALSE, fileEncoding = "latin1")
+head(df_csv, 10)
+```
+
+```
+##                Library           Operator             Address.Line.1
+## 1  Ardsley and Tingley Leeds City Council         213a Bradford Road
+## 2               Armley Leeds City Council              2 Stocks Hill
+## 3              Beeston Leeds City Council Units 5-6, District Centre
+## 4           Boston Spa Leeds City Council                High Street
+## 5              Bramley Leeds City Council                 Hough Lane
+## 6            Calverley Leeds City Council           Thornhill Street
+## 7              Central Leeds City Council                The Headrow
+## 8      Chapel Allerton Leeds City Council         106 Harrogate Road
+## 9           Chapeltown Leeds City Council        The Reginald Centre
+## 10        Compton Road Leeds City Council         The Compton Centre
+##         Address.Line.2 Address.Line.3 Postcode VPostcode Latitude Longitude
+## 1             Tingley       Wakefield  WF3 2DL   WF032DL 53.72435 -1.550108
+## 2               Armley          Leeds LS12 1UQ   LS121UQ 53.79713 -1.588210
+## 3          Town Street          Leeds LS11 8PN   LS118PN 53.77229 -1.570413
+## 4             Wetherby          Leeds LS23 6BH   LS236BH 53.90686 -1.351368
+## 5              Bramley          Leeds LS13 3ND   LS133ND 53.81044 -1.630085
+## 6            Calverley          Leeds LS28 5PD   LS285PD 53.82907 -1.687154
+## 7     Calverley Street          Leeds  LS1 3AB   LS013AB 53.80013 -1.548706
+## 8      Chapel Allerton          Leeds  LS7 4LZ   LS074LZ 53.82833 -1.537206
+## 9  263 Chapeltown Road          Leeds  LS7 3EX   LS073EX 53.81767 -1.531703
+## 10      Harehills Lane          Leeds  LS9 7BG   LS097BG 53.80953 -1.510093
+##                       Ward
+## 1   Ardsley and Robin Hood
+## 2                   Armley
+## 3      Beeston and Holbeck
+## 4                 Wetherby
+## 5  Bramley and Stanningley
+## 6    Calverley and Farsley
+## 7         City and Hunslet
+## 8          Chapel Allerton
+## 9          Chapel Allerton
+## 10    Gipton and Harehills
+##                                                             ONS.Ref
+## 1  http://statistics.data.gov.uk/id/statistical-geography/E05001413
+## 2  http://statistics.data.gov.uk/id/statistical-geography/E05001414
+## 3  http://statistics.data.gov.uk/id/statistical-geography/E05001415
+## 4  http://statistics.data.gov.uk/id/statistical-geography/E05001443
+## 5  http://statistics.data.gov.uk/id/statistical-geography/E05001416
+## 6  http://statistics.data.gov.uk/id/statistical-geography/E05001418
+## 7  http://statistics.data.gov.uk/id/statistical-geography/E05001420
+## 8  http://statistics.data.gov.uk/id/statistical-geography/E05001419
+## 9  http://statistics.data.gov.uk/id/statistical-geography/E05001419
+## 10 http://statistics.data.gov.uk/id/statistical-geography/E05001424
+##        Telephone                        Email        Monday.opening.hours
+## 1  0113 253 9025 enquiry.express@leeds.gov.uk 10:00 -13:00, 14:00 - 17:00
+## 2  0113 378 5670 enquiry.express@leeds.gov.uk               10:00 - 19:00
+## 3  0113 378 1849 enquiry.express@leeds.gov.uk               10:00 - 17:00
+## 4  0193 784 5239 enquiry.express@leeds.gov.uk               09:00 - 12:00
+## 5  0113 378 1851 enquiry.express@leeds.gov.uk               09:00 - 17:00
+## 6  0113 378 3124 enquiry.express@leeds.gov.uk               14:00 - 17:00
+## 7  0113 378 5005 enquiry.express@leeds.gov.uk               09:00 - 19:00
+## 8  0113 378 1859 enquiry.express@leeds.gov.uk               10:00 - 17:00
+## 9  0113 336 7683 enquiry.express@leeds.gov.uk               09:00 - 17:00
+## 10 0113 336 7790 enquiry.express@leeds.gov.uk               09:00 - 19:00
+##    Tuesday.opening.hours      Wednesday.opening.hours Thursday.opening.hours
+## 1                 Closed 10:00 - 13:00, 14:00 - 18:00                 Closed
+## 2          08:30 - 19:00                08:30 - 19:00          08:30 - 19:00
+## 3          10:00 - 17:00                10:00 - 17:00          10:00 - 17:00
+## 4                 Closed                10:00 - 17:00                 Closed
+## 5          09:00 - 18:00                09:00 - 17:00          10:00 - 17:00
+## 6          09:00 - 13:00                       Closed          14:00 - 18:00
+## 7          09:00 - 19:00                09:00 - 19:00          09:00 - 18:00
+## 8          10:00 - 17:00                10:00 - 19:00          10:00 - 17:00
+## 9          09:00 - 19:00                10:00 - 17:00          09:00 - 17:00
+## 10         09:00 - 19:00                09:00 - 19:00          09:00 - 19:00
+##    Friday..opening.hours Saturday.opening.hours Sunday.opening.hours
+## 1          10:00 - 13:00          10:00 - 13:00               Closed
+## 2          08:30 - 19:00          10:00 - 16:00               Closed
+## 3          10:00 - 18:00          11:00 - 14:00        11:00 - 14:00
+## 4          09:00 - 12:00          09:00 - 12:00               Closed
+## 5          09:00 - 17:00          10:00 - 15:00        11:00 - 14:00
+## 6          09:00 - 13:00          10:00 - 13:00        10:00 - 13:00
+## 7          09:00 - 17:00          10:00 - 17:00        11:00 - 15:00
+## 8          10:00 - 17:00          11:00 - 16:00               Closed
+## 9          09:00 - 17:00          11:00 - 13:00               Closed
+## 10         09:00 - 19:00          10:00 - 16:00        12:00 - 16:00
+##    Assistive.Technology Adult.books.for.loan..fiction.and.non.fiction
+## 1                     1                                             1
+## 2                     1                                             1
+## 3                     1                                             1
+## 4                     1                                             1
+## 5                     1                                             1
+## 6                     1                                             1
+## 7                     1                                             1
+## 8                     1                                             1
+## 9                     1                                             1
+## 10                    1                                             1
+##    Baby.changing.facility Boardmaker Book.tokens.for.sale Cafe Car.parking
+## 1                      NA         NA                   NA   NA           1
+## 2                      NA          1                    1   NA          NA
+## 3                      NA          1                    1   NA           1
+## 4                      NA         NA                    1   NA          NA
+## 5                      NA          1                    1   NA          NA
+## 6                      NA         NA                    1   NA          NA
+## 7                      NA          1                    1   NA          NA
+## 8                      NA          1                    1   NA          NA
+## 9                       1          1                    1   NA           1
+## 10                      1          1                    1   NA           1
+##    Children.s.books.for.loan..fiction.and.non.fiction
+## 1                                                   1
+## 2                                                   1
+## 3                                                   1
+## 4                                                   1
+## 5                                                   1
+## 6                                                   1
+## 7                                                   1
+## 8                                                   1
+## 9                                                   1
+## 10                                                  1
+##    Children.s.holiday.activities..check.locally Community.Information
+## 1                                             1                     1
+## 2                                             1                     1
+## 3                                             1                     1
+## 4                                             1                     1
+## 5                                             1                     1
+## 6                                             1                     1
+## 7                                             1                     1
+## 8                                             1                     1
+## 9                                             1                     1
+## 10                                            1                     1
+##    CDs...Music Computers Council.Papers...online Councillor.surgery
+## 1           NA         1                       1                 NA
+## 2           NA         1                       1                  1
+## 3           NA         1                       1                  1
+## 4           NA         1                       1                 NA
+## 5           NA         1                       1                  1
+## 6           NA         1                       1                  1
+## 7            1         1                       1                 NA
+## 8           NA         1                       1                  1
+## 9           NA         1                       1                  1
+## 10          NA         1                       1                  1
+##    Credit.card.payments Disabled.access Drinks.machine
+## 1                    NA               1             NA
+## 2                    NA               1             NA
+## 3                    NA               1             NA
+## 4                    NA               1             NA
+## 5                    NA               1             NA
+## 6                    NA               1             NA
+## 7                     1               1             NA
+## 8                    NA               1             NA
+## 9                    NA               1              1
+## 10                    1               1              1
+##    Electoral.Registers..local Electronic.magnifier Employment...training.advice
+## 1                          NA                   NA                           NA
+## 2                          NA                   NA                           NA
+## 3                          NA                   NA                           NA
+## 4                          NA                   NA                           NA
+## 5                          NA                   NA                           NA
+## 6                          NA                   NA                           NA
+## 7                           1                   NA                           NA
+## 8                          NA                    1                           NA
+## 9                          NA                   NA                            1
+## 10                         NA                   NA                            1
+##    Events..check.locally Exhibition.space Fax Free.Internet.Access
+## 1                      1               NA   1                    1
+## 2                      1               NA   1                    1
+## 3                      1               NA   1                    1
+## 4                      1               NA   1                    1
+## 5                      1               NA   1                    1
+## 6                      1               NA   1                    1
+## 7                      1               NA   1                    1
+## 8                      1               NA   1                    1
+## 9                      1               NA   1                    1
+## 10                     1               NA   1                    1
+##    Homework.Collection Learning.Sessions.eg.learn.how.to.use.a.computer
+## 1                    1                                                1
+## 2                    1                                                1
+## 3                    1                                                1
+## 4                    1                                                1
+## 5                    1                                                1
+## 6                    1                                                1
+## 7                    1                                                1
+## 8                    1                                                1
+## 9                    1                                                1
+## 10                   1                                                1
+##    LeedsCard.Registration Local...Family.History Local.bus.timetables
+## 1                      NA                      1                    1
+## 2                       1                     NA                   NA
+## 3                       1                     NA                    1
+## 4                      NA                     NA                   NA
+## 5                       1                     NA                   NA
+## 6                       1                      1                    1
+## 7                       1                     NA                   NA
+## 8                       1                     NA                    1
+## 9                       1                     NA                    1
+## 10                      1                     NA                    1
+##    Local.publications.for.sale Meeting.room.for.hire
+## 1                           NA                    NA
+## 2                           NA                    NA
+## 3                           NA                     1
+## 4                           NA                    NA
+## 5                           NA                    NA
+## 6                           NA                    NA
+## 7                           NA                     1
+## 8                           NA                    NA
+## 9                           NA                    NA
+## 10                          NA                    NA
+##    Microsoft.Office.Facilities MP.surgery Newspapers Photocopier..B...W
+## 1                            1         NA         NA                  1
+## 2                            1          1          1                  1
+## 3                            1          1          1                  1
+## 4                            1         NA         NA                 NA
+## 5                            1          1          1                  1
+## 6                            1         NA         NA                  1
+## 7                            1         NA          1                  1
+## 8                            1         NA          1                  1
+## 9                            1          1          1                  1
+## 10                           1         NA          1                  1
+##    Planning.Applications..online. Printing Readers..Group Request.Service
+## 1                               1        1              1               1
+## 2                               1        1              1               1
+## 3                               1        1              1               1
+## 4                               1        1             NA               1
+## 5                               1        1              1               1
+## 6                               1        1              1               1
+## 7                               1        1              1               1
+## 8                               1        1              1               1
+## 9                               1        1              1               1
+## 10                              1        1              1               1
+##    Scanner Self.service.facility Story.tapes.for.children Story.time
+## 1        1                     1                        1          1
+## 2       NA                    NA                        1          1
+## 3        1                     1                        1          1
+## 4       NA                    NA                        1         NA
+## 5       NA                    NA                        1          1
+## 6        1                     1                        1          1
+## 7       NA                    NA                        1          1
+## 8        1                     1                        1          1
+## 9        1                     1                        1          1
+## 10       1                     1                        1          1
+##    Study.space Sunday.opening Talking.books Theatre.bookings Toilet
+## 1           NA             NA             1               NA      1
+## 2           NA             NA             1                1      1
+## 3           NA              1             1                1      1
+## 4           NA             NA             1               NA     NA
+## 5           NA             NA             1                1      1
+## 6           NA             NA             1                1      1
+## 7           NA             NA             1                1     NA
+## 8           NA             NA             1               NA     NA
+## 9           NA             NA             1               NA      1
+## 10          NA              1             1                1      1
+##    Tourist.Information Free.WIFI Writers..Group
+## 1                   NA         1             NA
+## 2                   NA         1             NA
+## 3                   NA         1             NA
+## 4                   NA         1             NA
+## 5                   NA         1             NA
+## 6                   NA         1              1
+## 7                   NA         1             NA
+## 8                   NA         1             NA
+## 9                   NA         1              1
+## 10                  NA         1             NA
+```
+The other way is to download it and save it to your working directory.
+
+Let us download [Leeds libraries csv file](https://datamillnorth.org/download/leeds-libraries/cfc9f345-4916-4b74-aa9e-cecc78db9075/library%2520locations.csv)
+Make sure you save the file into your R-Project working directory before you ask R to execute the following
+
+```
+df_csv <- read.csv("library locations.csv", stringsAsFactors = FALSE, fileEncoding = "latin1")
+```
+
+{{% notice info %}}
+Run the above code again, but set `stringsAsFactors` argument from the `read.csv` function to `TRUE`. Can you tell the difference between now and before? Why do you think it is useful to use `fileEncoding` argument?
+{{% /notice %}}
+
+What do you think about this dataset? 🤔
+
+#### Using readr::read_csv()
+
+`readr` is a package that reads rectangular data more quickly than **base R** `read.cdv()`. Another difference from the `read.csv()` function is that it assumes characters are strings and not factors by default.
+
+Just so you can see how easy it is to use other packages for importing data into R, the code below illustrates the use of read_csv().
+
+```
+## If you don't have readr installed yet, uncomment and run the line below
+# install.packages("readr")
+library(readr)
+df_csv <- read_csv("library locations.csv")
+df_csv
+```
+
+{{% notice note %}}
+Check the `readr::read_delim()` function for more efficient delimited data file reading.
+{{% /notice %}}
+
+### Importing Excel files with `readxl`
+
+Importing Excel data files is not straightforward as it might contain multiple sheets. We will focus on using the `readxl` package as it is the most efficient so far.  
+
+{{% notice warning %}}
+To access the data from an Excel sheet you can’t just copy and paste the URL for the file. You have to download the file first.
+{{% /notice %}}
+
+Let us download an Excel data file from [data.gov.uk](https://data.gov.rs/) about [Greater London Authority Poll Results 2018](https://data.gov.uk/dataset/f1331be1-cef6-4abd-8c08-c463716f83bd/gla-poll-results-2018) from this link:[December 2018 - YouGov GLA poll results](https://data.london.gov.uk/download/gla-poll-results-2018/4fa46414-100c-4727-907f-dc4a185f018c/Dec%25202018%2520-%2520YouGov%2520GLA%2520poll%2520results.xls). 
+
+If you are unable to open the file in Excel to examine how many sheets the file has, try to read the file in R accessing the first one by specifying it in the `read_excel()` function as required. As previously, make sure you save the file into your R-Project working directory before you ask R to execute the following:
+
+```
+## If you don't have readxl installed yet, uncomment the line below and run it 
+#install.packages("readxl")
+library(readxl)
+df_xl <- read_excel("Dec 2018 - YouGov GLA poll results", sheet = 1)
+```
+
+What do you think?
+
+{{% notice warning %}}
+People like to make their Excel spreadsheets look 'pretty' with 'fancy' formatting, which could create difficulty when reading them in R.
+{{% /notice %}}
+
+Explore the arguments of the `read_excel()` function, such as the `skip` argument through which you can specify a minimum number of rows to skip before reading anything.
+
+### Importing data using `jsonlite`
+
+When accessing a JSON file in R using the `jsonlite` package you need to point to the file by providing the local path if the file is downloaded or by the URL from where it can be accessed. 
+
+
+
+
+
