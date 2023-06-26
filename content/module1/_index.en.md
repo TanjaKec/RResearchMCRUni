@@ -5,7 +5,7 @@ title: Module 1
 weight: 2
 ---
 
-### Module 2
+### Module 1
 
 ### RStudio IDE; R language; Data classification/data types
 
