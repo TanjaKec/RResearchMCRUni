@@ -75,7 +75,7 @@ Inside the data folder you will find the following `csv` files:
 - `noc_regions.csv`: contains the list of the National Olympic Committees (NOC)
 - `exyu_olympic.csv`: subset of the results of the ex-[Yugoslavia](https://en.wikipedia.org/wiki/Yugoslavia) countries (Bosnia and Herzegovina, Croatia, Montenegro, North Macedonia, Serbia and Slovenia). 
 
-The `120 years of Olympic history: athletes and results` data set was uploaded to the Kaggle by [Randi H Griffin, PhD](http://www.randigriffin.com/2018/05/27/olympic-history-1-web-scraping.html) who has subsequently wrote a series of blog posts analysing different aspects of the data.
+The `120 years of Olympic history: athletes and results` data set was uploaded to [Kaggle](https://www.kaggle.com) by [Randi H Griffin, PhD](http://www.randigriffin.com/2018/05/27/olympic-history-1-web-scraping.html) who has subsequently written a series of blog posts analysing different aspects of the data.
 
 
 {{% notice info %}}
@@ -84,13 +84,13 @@ Split into groups of three and discuss how you would produce a Word document or 
 
 Open the `exyu_olympic.csv` file in Excel and try to:
 
--	Find the number of medals per team? 
--	Find the number of medals per team for the last Rio games?
--	Visualise data about the number of female and male athletes from ex-YU countries available in the data set.
+-	Find the number of medals per team 
+-	Find the number of medals per team for the Rio games
+-	Visualise data about the number of female and male athletes from ex-YU countries available in the data set   
 
 We will work on this for the next 10 minutes. 🕟😬
 
-We already have the R code that will provide the results for those questions. 👆😅
+We already have the R code that will provide the results for these questions. 👆😅
 
 Open the `RMarkdown4RR.Rproj` file. Once you get RStudio up and running for the given project click on the "R/script1.R" file and run it chunk by chunk. 👏👏👏
 
