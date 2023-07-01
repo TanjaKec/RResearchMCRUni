@@ -22,6 +22,7 @@ Sook is passionate about promoting greater access to math and data analysis for 
 
 ![Niyati Somani](/images/Niyati.jpg?width=40pc)
 
+
 -----------------------------
 Material is released under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
