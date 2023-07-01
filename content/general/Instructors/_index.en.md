@@ -20,7 +20,7 @@ Sook is passionate about promoting greater access to math and data analysis for 
 
 [Niyati Somani](https://www.linkedin.com/in/niyati-somani-9141b1196/) is a recent Economics graduate from [the University of Manchester](https://www.manchester.ac.uk/). During her time at University, she completed a work placement at the [Bank of England](https://www.bankofengland.co.uk) which served as her introduction to the world of data. She quickly became proficient in utilising R to extract insights and make data-driven decisions. Throughout her final year, she continued to expand her expertise in R for various modules and personal projects. With a keen eye for detail and a strong aptitude for problem-solving, Niyati is passionate about sharing her knowledge and helping others develop the necessary skills to use data efficiently.
 
-![Niyati Somani](/images/Niyati.jpg?width=40pc)
+![Niyati Somani](/images/NS.jpg?width=40pc)
 
 
 -----------------------------
