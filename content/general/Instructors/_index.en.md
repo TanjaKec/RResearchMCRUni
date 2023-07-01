@@ -18,6 +18,10 @@ weight: 2
 
 Sook is passionate about promoting greater access to math and data analysis for women and individuals with social science backgrounds, and with less computation skills. Her approach to teaching involves maximising inclusiveness and diversity to reach as wide an audience as possible. Sook emphasises demystifying complex statistical and computational procedures, and presenting them in an accessible way. She is committed to contributing educational resources to the DS community as an ongoing effort to enlighten herself and others. 
 
+[Niyati Somani](https://www.linkedin.com/in/niyati-somani-9141b1196/) is a recent Economics graduate from [the University of Manchester](https://www.manchester.ac.uk/). During her time at University, she completed a work placement at the [Bank of England](https://www.bankofengland.co.uk) which served as her introduction to the world of data. She quickly became proficient in utilising R to extract insights and make data-driven decisions. Throughout her final year, she continued to expand her expertise in R for various modules and personal projects. With a keen eye for detail and a strong aptitude for problem-solving, Niyati is passionate about sharing her knowledge and helping others develop the necessary skills to use data efficiently.
+
+![Niyati Somani](/images/Niyati.jpg?width=40pc)
+
 -----------------------------
 Material is released under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
