@@ -23,6 +23,10 @@ Sook is passionate about promoting greater access to math and data analysis for 
 ![Niyati Somani](/images/NS.jpg?width=40pc)
 
 
+**[Harry Penford](https://www.linkedin.com/in/harry-penfold-565228149/)** is a recent Economics graduate from [the University of Manchester](https://www.manchester.ac.uk/). In his third year, Harry worked a year in the [Home Office](https://www.gov.uk/government/organisations/home-office) as a student Economist. During this time, he undertook various data-driven projects in which he realised the importance of being data literate. While he had become familiar with R-studio in his second year, he enrolled in a DataCamp subscription to improve his data analysis skills. As someone with little experience before this, Harry is passionate about making the world of data and programming accessible and exciting for everyone.
+
+![Niyati Somani](/images/HP.jpg?width=40pc)
+
 -----------------------------
 Material is released under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
